@@ -3,15 +3,15 @@ Source: http://ericholscher.com/blog/2008/nov/15/debugging-django-production-env
 
 Introduction
 ------------
-This is a pretty simple middleware that is crazy useful. When you throw this 
-inside of your site, it will give you a normal Django error page if 
+This is a pretty simple middleware that is crazy useful. When you throw this
+inside of your site, it will give you a normal Django error page if
 you're a superuser, or if your IP is in INTERNAL_IPS.
 
 Implement
 ---------
 Add to your middleware:
 
-'sugar.middleware.UserBasedExceptionMiddleware',
+'sugar.middleware.debugging.UserBasedExceptionMiddleware',
 
 """
 
