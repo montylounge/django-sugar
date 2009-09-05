@@ -17,29 +17,27 @@ class AwesomeMiddleware(object):
 
     """
 
-  def __init__(self):
-      self.is_awesome = True
+    def __init__(self):
+        self.is_awesome = True
 
-      #yes, you can override with your own awesomeness.
-      self.awesomeness = getattr(settings, 'AWESOMENESS', AWESOMENESS)
+        #yes, you can override with your own awesomeness.
+        self.awesomeness = getattr(settings, 'AWESOMENESS', AWESOMENESS)
 
-  def __process_awesome_response(self, request, response):
-      """
-      Handles rendering the awesome.
+    def __process_awesome_response(self, request, response):
+        """
+        Handles rendering the awesome.
 
-      Private access because not everyone method can be this awesome.
+        Private access because not everyone method can be this awesome.
 
-      """
-      response.content = _END_BODY_RE.sub(smart_str('<body\\1>' + self.awesomeness), response.content)
-      return response
+        """
+        response.content = _END_BODY_RE.sub(smart_str('<body\\1>' + self.awesomeness), response.content)
+        return response
 
-  def process_response(self, request, response):
-      """
-      The out-of-the-box "process_response" method isn't awesome enough,
-      so we hand it off to the private _process_awesome_response method which
-      is obviously much more awesome than "process_response"
+    def process_response(self, request, response):
+        """
+        The out-of-the-box "process_response" method isn't awesome enough,
+        so we hand it off to the private _process_awesome_response method which
+        is obviously much more awesome than "process_response"
 
-      """
-      return self.__process_awesome_response(request, response)
-
-
+        """
+        return self.__process_awesome_response(request, response)
