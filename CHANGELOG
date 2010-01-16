@@ -1,0 +1,21 @@
+
+01.15.09
+---------
+Added this CHANGELOG file.
+Updated AUTHORS for most of the additions below.
+Updated cache tag
+Updated pygments_tag
+Added templatetags/sugar_pagination.py
+Added templatetags/sugar_template_utils.py
+Added more tags to templatetags/text_tags.py
+Added templatetags/querystring_tags.py
+Added templatetags/in_list.py
+Added templatags/media.py
+Add /tests.py (still need to add more tests)
+Added views/json.py
+Added views/helpers.py
+Added views/decorators.py
+Added views/exceptions.py
+
+
+
