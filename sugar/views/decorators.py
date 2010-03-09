@@ -2,7 +2,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
-from lib.http import JsonResponse
+from sugar.views.json import JsonResponse
 
 def render_to(template):
     """
